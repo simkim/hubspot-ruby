@@ -80,7 +80,7 @@ class Hubspot::Contact < Hubspot::Resource
 
         unless changes.empty?
           {
-            "vid" => contact.id,
+            "email" => contact.email,
             "properties" => changes.map { |k, v| { "property" => k, "value" => v } }
           }
         end
